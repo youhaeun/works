@@ -12,7 +12,7 @@
 						<input type="password" name="pwd" id="pwd" class="input-text" placeholder="비밀번호" style="width:190px"/>
 						<input type="hidden" name="referer" value="<?php echo $_SERVER['HTTP_REFERER']; ?>" />
 					</div>
-					<button type="submit" class="btn-login">로그인</button>
+					<button type="button" class="btn-login" style="cursor:pointer" id='loginBtn'>로그인</button>
 				</div>
 			</form>
 			
@@ -26,8 +26,8 @@
 			</div>
 			
 			<div class="box-btn">
-				<a href="/member/index.php?mode=step_01" class="btn-m-gray">회원가입</a>
-				<a href="/member/index.php?mode=find_id" class="btn-m-gray">ID/PW 찾기</a>
+				<a href="/member/index.php?mode=step_01" class="btn-m-gray" style="cursor:pointer">회원가입</a>
+				<a href="/member/index.php?mode=find_id" class="btn-m-gray" style="cursor:pointer">ID/PW 찾기</a>
 			</div>
 		</div>
 		<div class="login-guide">
@@ -60,19 +60,22 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#form1").submit(function() {
+		$("#loginBtn").on('click', function() {
 			var fields = $("#form1").serialize();
 			var link = '#';
+            
 			if(!$("#uid").val()) {
 				alert("아이디를 입력해주세요.");
 				$("#uid").focus();
 				return false;
 			}
+            
 			if(!$("#pwd").val()) {
 				alert("비밀번호를 입력해주세요.");
 				$("#pwd").focus();
 				return false;
 			}
+            
 			$.post('member_ajax.php', fields, function( data ) {
 				alert(data.msg);
 				if(data.result == 'success') {

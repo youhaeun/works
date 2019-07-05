@@ -1,4 +1,4 @@
-<?php if($basename != "login.php")  ?>
+<? if($basename != "login.php") ?>
 	<div id="footer" class="footer">
 		<div class="inner p-r">
 			<img src="http://img.hackershrd.com/common/logo_footer.png" class="logo-footer" alt="해커스 HRD LOGO" width="165" height="37"/>

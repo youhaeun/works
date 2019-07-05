@@ -336,6 +336,7 @@ $(document).ready(function(){
 	//main_slider_applyclass
 	var bnrWrap = $('.slider-applyclass')
 	var bnr_slider = bnrWrap.find('.bxslider');
+    
 	slider = bnr_slider.bxSlider({
 		auto: true,
 		mode : 'fade',

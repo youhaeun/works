@@ -161,8 +161,6 @@
 					
 					<?php
 						echo $_SESSION['loginId']."님";
-						if(isset($_SESSION['admin']))
-							echo "<a href='/admin'>관리자메뉴</a>";
 					?>
 					<a href="/member/login.php?mode=logout">로그아웃</a>
 					<a href="/member/index.php?mode=modify">내정보</a>

@@ -20,7 +20,7 @@ include_once "../header.php";
 
 			<div class="box-btn mt30">
 			<?php
-				if(!isset($_SESSION['login_id']))
+				if(!isset($_SESSION['loginid']))
 					echo "<a href='/member/login.php' class='btn-l'>로그인</a>";
 			?>
 				<a href="#" class="btn-l-line ml5">수강신청</a>
